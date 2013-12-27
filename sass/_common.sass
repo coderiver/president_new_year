@@ -1,49 +1,80 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
++font(pfdintextcondpro-italic, pfdintextcondpro-italic)  
++font(pfdintextcondpro-medium, pfdintextcondpro-medium)  
+=fit
+	font-family: "pfdintextcondpro-italic", Arial, sans-serif 
+=fmed
+	font-family: "pfdintextcondpro-medium", Arial, sans-serif 
+
 body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
-	line-height: 1.4
-
-
+	position: relative
+	min-height: 570px
+	min-width: 700px
+	font-size: 18px 
+	line-height: 1.2
+	background: url(../img/bg.jpg) 0 -150px no-repeat 
+	+fmed
+	color: #fff 
+a
+	text-decoration: none
+	color: #fff 
 // common blocks
+.header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	padding: 14px 15px
+	+clr 
+.logo
+	float: left
+	text-transform: uppercase 
+.soc-share
+	float: right
+.main
+	position: absolute
+	top: 50%
+	left: 50%
+	margin: -195px 0 0 -320px 
+	width: 640px
+	height: 390px
+	text-align: center
+.title
+	position: absolute
+	top: -58px
+	left: 50%
+	margin-left: -21%
+	width: 42%
+	font-size: 19px
+	+fit
+	text-align: center
+	font-weight: normal
+	color: #fcff00  
+	
+.video
+	position: relative
+	+box-shadow(0 0 79px 10px rgba(81,166,187,1))
+	iframe,img
+		display: block
+.counter
+	position: absolute
+	bottom: 77px
+	right: 0
+	left: 0
+	text-align: center
+	font-size: 80px
+	color: #fff 
+
+.footer
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	text-align: center
+	a
+		display: inline-block
+		margin: 0 20px 
+		vertical-align: middle
+.footer__title
+	margin-bottom: 10px
+	font-size: 11px
+	text-transform: uppercase
