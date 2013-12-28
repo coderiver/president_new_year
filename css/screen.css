@@ -22,7 +22,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 @font-face { font-family: pfdintextcondpro-medium; src: url("fonts/pfdintextcondpro-medium.eot"); src: url("fonts/pfdintextcondpro-medium.eot?#iefix") format("embedded-opentype"), url("fonts/pfdintextcondpro-medium.woff") format("woff"), url("fonts/pfdintextcondpro-medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-body { position: relative; min-height: 570px; min-width: 700px; font-size: 18px; line-height: 1.2; background: url(../img/bg.jpg) 0 -150px no-repeat; font-family: "pfdintextcondpro-medium", Arial, sans-serif; color: white; }
+body { position: relative; min-height: 570px; min-width: 700px; font-size: 18px; line-height: 1.2; background: url(../img/bg.jpg) 0 -150px repeat; font-family: "pfdintextcondpro-medium", Arial, sans-serif; color: white; }
 
 a { text-decoration: none; color: white; }
 
